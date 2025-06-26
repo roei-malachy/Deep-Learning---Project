@@ -1,0 +1,109 @@
+START on hostname
+argus04
+CUDAVS,0
+/tcmldrive/users/naamagav/DL_project/Deep-Learning---Project/BYU-competition
+# conda environments:
+#
+byu_env                  /home/naamagav/.conda/envs/byu_env
+keymorph_env             /home/naamagav/.conda/envs/keymorph_env
+keymorph_orig            /home/naamagav/.conda/envs/keymorph_orig
+motorenv              *  /home/naamagav/.conda/envs/motorenv
+nnFormer                 /home/naamagav/.conda/envs/nnFormer
+nnunet                   /home/naamagav/.conda/envs/nnunet
+placentaivim_env         /home/naamagav/.conda/envs/placentaivim_env
+synthseg                 /home/naamagav/.conda/envs/synthseg
+synthseg_env             /home/naamagav/.conda/envs/synthseg_env
+totalseg_env             /home/naamagav/.conda/envs/totalseg_env
+                         /home/naamagav/miniconda3
+                         /home/naamagav/refix
+base                     /opt/miniconda3
+
+True
+11.8
+90100
+2.5.1+cu118
+
+     active environment : motorenv
+    active env location : /home/naamagav/.conda/envs/motorenv
+            shell level : 5
+       user config file : /home/naamagav/.condarc
+ populated config files : 
+          conda version : 24.1.2
+    conda-build version : not installed
+         python version : 3.12.1.final.0
+                 solver : libmamba (default)
+       virtual packages : __archspec=1=zen4
+                          __conda=24.1.2=0
+                          __cuda=12.6=0
+                          __glibc=2.34=0
+                          __linux=5.14.0=0
+                          __unix=0=0
+       base environment : /opt/miniconda3  (read only)
+      conda av data dir : /opt/miniconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /opt/miniconda3/pkgs
+                          /home/naamagav/.conda/pkgs
+       envs directories : /home/naamagav/.conda/envs
+                          /opt/miniconda3/envs
+               platform : linux-64
+             user-agent : conda/24.1.2 requests/2.31.0 CPython/3.12.1 Linux/5.14.0-427.35.1.el9_4.x86_64 rocky/9.4 glibc/2.34 solver/libmamba conda-libmamba-solver/23.12.0 libmambapy/1.5.3
+                UID:GID : 146414377:146400513
+             netrc file : None
+           offline mode : False
+
+
+config -> r3d200
+overwriting cfg.epochs: 401 -> 250
+overwriting cfg.save_weights: True -> True
+seed 874556
+----------
+DTYPE: _3d
+TRAIN: dataset 1629 dataloader 271
+VALID: dataset 143, dataloader 143
+Model: unet3d
+n_param: 183_182_402
+Starting EMA..
+=========================
+cutoff: 0.9912802374863124
+cutoff_pct: 0.41433566433566427
+=========================
+SAVED WEIGHTS:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch51_bs6.pt
+SAVED CFG:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch51_bs6.pkl
+TRAIN: dataset 1629 dataloader 271
+VALID: dataset 143, dataloader 143
+=========================
+cutoff: 0.991616642975307
+cutoff_pct: 0.41433566433566427
+=========================
+SAVED WEIGHTS:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch101_bs6.pt
+SAVED CFG:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch101_bs6.pkl
+TRAIN: dataset 1629 dataloader 271
+VALID: dataset 143, dataloader 143
+=========================
+cutoff: 0.9945115009387889
+cutoff_pct: 0.41433566433566427
+=========================
+SAVED WEIGHTS:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch151_bs6.pt
+SAVED CFG:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch151_bs6.pkl
+TRAIN: dataset 1629 dataloader 271
+VALID: dataset 143, dataloader 143
+=========================
+cutoff: 0.9949529464845057
+cutoff_pct: 0.41433566433566427
+=========================
+SAVED WEIGHTS:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch201_bs6.pt
+SAVED CFG:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch201_bs6.pkl
+TRAIN: dataset 1629 dataloader 271
+VALID: dataset 143, dataloader 143
+=========================
+cutoff: 0.995665592330319
+cutoff_pct: 0.41433566433566427
+=========================
+{'val': {'loss': 0.6407715874118405, 'fbeta': 0.8816120906801007, 'precision': 0.8641975308641975, 'recall': 0.8860759493670886}}
+SAVED WEIGHTS:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch250_bs6.pt
+SAVED CFG:  /argusdata4/naamagav/byu/checkpoints/r3d200_874556_epoch250_bs6.pkl
+END
