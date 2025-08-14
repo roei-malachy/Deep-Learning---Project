@@ -245,7 +245,7 @@ if __name__ == "__main__":
     cfg.local_rank= 0
     cfg.rescale_p = 1.0
 
-    df_train= pd.read_csv("/argusdata/users/naamagav/byu/processed/folds_all.csv")
+    df_train= pd.read_csv("/argusdata4/users/naamagav/byu/processed/folds_all.csv")
     df_train= df_train[df_train["fold"] != -1]
     df_train= df_train[df_train["fold"] != cfg.fold].head(1)
 

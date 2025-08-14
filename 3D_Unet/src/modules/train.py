@@ -177,7 +177,7 @@ def train(cfg, writer=None, trial=None):
         ]
 
     # Datasets + Dataloaders
-    df_train= pd.read_csv("/argusdata/users/naamagav/byu/processed/folds_all.csv")
+    df_train= pd.read_csv("/argusdata4/users/naamagav/byu/processed/folds_all.csv")
     df_train= df_train[~df_train["tomo_id"].isin(skip_tomo_ids)]
     df_train= df_train[df_train["fold"] != cfg.fold]
     if cfg.fast_dev_run or cfg.train == False: 
@@ -194,7 +194,7 @@ def train(cfg, writer=None, trial=None):
         sampler= None
     train_dl= get_dataloader(train_ds, cfg, sampler=sampler, mode="train")
 
-    df_val= pd.read_csv("/argusdata/users/naamagav/byu/processed/folds_all.csv")
+    df_val= pd.read_csv("/argusdata4/users/naamagav/byu/processed/folds_all.csv")
     df_val= df_val[~df_val["tomo_id"].isin(skip_tomo_ids)]
     df_val= df_val[df_val["fold"] == cfg.fold]
     if cfg.fast_dev_run: 

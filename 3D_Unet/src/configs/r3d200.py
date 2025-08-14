@@ -7,7 +7,7 @@ cfg.num_workers= 6
 
 # Dataset
 cfg.dataset_type= "_3d"
-cfg.data_dir= "/argusdata/users/naamagav/byu/processed"
+cfg.data_dir= "/argusdata4/users/naamagav/byu/processed"
 
 # Model
 cfg.model_type = "unet3d"

@@ -150,7 +150,7 @@ class ResnetEncoder3d(nn.Module):
         }
         if bb in backbone_cfg:
             layers, block = backbone_cfg[bb]
-            wpath = "/argusdata/users/naamagav/byu/model_zoo/{}_KM_200ep.pt".format(bb)
+            wpath = "/argusdata4/users/naamagav/byu/model_zoo/{}_KM_200ep.pt".format(bb)
         else:
             raise ValueError(f"ResnetEncoder3d backbone: {bb} not implemented.")
 

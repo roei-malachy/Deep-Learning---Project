@@ -11,8 +11,8 @@ from PIL import Image
 class ByuProcessor():
     def __init__(
         self, 
-        in_dir: str = "/argusdata/users/naamagav/byu/train/", 
-        out_dir: str = "/argusdata/users/naamagav/byu/processed/", 
+        in_dir: str = "/argusdata4/users/naamagav/byu/train/", 
+        out_dir: str = "/argusdata4/users/naamagav/byu/processed/", 
     ):
         super().__init__()
         self.in_dir = in_dir
@@ -92,15 +92,15 @@ class ByuProcessor():
 if __name__ == "__main__":
 
     # Load folds
-    df= pd.read_csv("/argusdata/users/naamagav/byu/processed/folds_all.csv")
+    df= pd.read_csv("/argusdata4/users/naamagav/byu/processed/folds_all.csv")
     df= df.loc[df["tomo_id"].str.startswith("tomo_"), ["tomo_id", "fold"]]
     df= df.reset_index(drop=True)
     print(df.head())
 
     # Process
     p= ByuProcessor(
-        in_dir = "/argusdata/users/naamagav/byu/train/", 
-        out_dir = "/argusdata/users/naamagav/byu/processed/",
+        in_dir = "/argusdata4/users/naamagav/byu/train/", 
+        out_dir = "/argusdata4/users/naamagav/byu/processed/",
         )
     p.run(df=df.copy())
 

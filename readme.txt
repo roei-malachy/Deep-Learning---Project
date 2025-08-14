@@ -1,1 +1,123 @@
-הקובץ הראשון בריפו שלי
+# Comparing 3D and 2D Models for Object Detection of Bacterial Motors
+## 3D-Unet
+
+This repository contains our solution for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
+
+Our approach is based on the [1st place solution by @brendanartley](httpss://www.kaggle.com/brendanartley) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
+
+<h1 align="center">
+<img src="3D_Unet/imgs/model.jpg" alt="Model Architecture" width="800">
+</h1>
+<p align="center"><em>Figure: Model architecture from the 1st place solution.</em></p>
+
+---
+
+## 📋 Prerequisites
+
+Before you begin, you need to manually download the data and pre-trained models.
+
+1.  **Competition Data:** Download the data from the [competition page](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025) and place the `train` and `test` folders inside `/argusdata4/naamagav/byu/`.
+2.  **Pre-trained Encoder:** Download the Swin3D-B weights (`swin3d_b_1k-24f7c7c6.pth`) from [this link](https://download.pytorch.org/models/swin3d_b_1k-24f7c7c6.pth) and place the file in `model_zoo/`.
+3.  **Folds CSV:** Download the `folds_all.csv` file from [this dataset](https://www.kaggle.com/datasets/brendanartley/solution-ds-byu-1st-place-metadata) and place it in the `processed/` directory.
+
+Your final directory structure should look like this:
+
+```
+/argusdata4/naamagav/byu/
+├── checkpoints/
+├── model_zoo/
+│   └── swin3d_b_1k-24f7c7c6.pth
+├── processed/
+│   └── folds_all.csv
+├── test/
+├── train/
+└── sample_submission.csv
+└── train_labels.csv
+```
+
+---
+
+## ⚙️ Setup and Installation
+
+This project uses `conda` for environment management.
+
+1.  **Install Miniconda (if not already installed):**
+    ```bash
+    wget [https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh)
+    bash Miniconda3-latest-Linux-x86_64.sh
+    ```
+
+2.  **Create and Activate the Conda Environment:**
+    ```bash
+    # Set up channels for best dependency resolution
+    conda config --set channel_priority flexible
+    conda config --add channels conda-forge nvidia pytorch
+
+    # Create and activate the environment
+    conda create --name byu_env python=3.10
+    conda activate byu_env
+    ```
+
+3.  **Install Dependencies:**
+    ```bash
+    # Install PyTorch and MONAI via Conda
+    conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8 monai==1.4.0 wandb==0.19.6 tqdm==4.67.1
+
+    # Install remaining packages via Pip
+    pip install -r requirements.txt
+    ```
+
+---
+
+## 🚀 Usage
+
+The workflow is divided into preprocessing, training, and inference.
+
+### 1. Preprocessing
+
+First, process the raw tomograms into a format suitable for training. This script will populate the `/argusdata4/naamagav/byu/processed/` directory.
+
+```bash
+python -m src.pre.run
+### Preprocessing
+```
+
+### 2. Training
+
+To train the model, you can run the provided script. The default hyperparameters are listed below. A full training run on an NVIDIA L40 takes approximately 17.5 hours for 250 epochs.
+
+```bash
+# For local execution or interactive jobs
+bash run.sh
+
+# For SLURM-based clusters
+sbatch slurm.sh
+
+```
+#### Hyperparameters
+* **Optimizer:** `AdamW`
+* **Learning Rate:** `1e-4`
+* **Weight Decay:** `1e-4`
+* **Scheduler:** `Constant`
+* **Epochs:** `250`
+* **Batch Size:** `12`
+* **Loss Function:** `SmoothBCE`
+* **ROI Size:** `(64, 672, 672)`
+* **Kernel Size:** `7`
+
+---
+
+### 3. Inference
+
+To generate predictions on the test set and create a submission file, run the inference script. Make sure to point to your trained model checkpoint.
+
+```bash
+python -m src.infer --checkpoint_path checkpoints/best_model.pth --output_path submission.csv
+```
+
+
+## 📚 References
+
+1. [1st place solution of the BYU - Locating Bacterial Flagellar Motors 2025 competition by @brendanartley](https://www.kaggle.com/brendanartley)
+2. [Solution Metadata Dataset by @brendanartley](https://www.kaggle.com/datasets/brendanartley/solution-ds-byu-1st-place-metadata)
+3. [Competition Homepage: BYU - Locating Bacterial Flagellar Motors 2025](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025)
