@@ -42,10 +42,7 @@ Your final directory structure should look like this:
 This project uses `conda` for environment management.
 
 1.  **Install Miniconda (if not already installed):**
-    ```bash
-    wget [https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh)
-    bash Miniconda3-latest-Linux-x86_64.sh
-    ```
+Get bash script for miniconda download from [here](https://docs.conda.io/en/main/miniconda.html#linux-installers)
 
 2.  **Create and Activate the Conda Environment:**
     ```bash
@@ -79,7 +76,6 @@ First, process the raw tomograms into a format suitable for training. This scrip
 
 ```bash
 python -m src.pre.run
-### Preprocessing
 ```
 
 ### 2. Training
