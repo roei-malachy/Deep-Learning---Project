@@ -1,9 +1,9 @@
 # Comparing 3D and 2D Models for Object Detection of Bacterial Motors
 ## 3D-Unet
 
-This repository contains our solution for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
+This repository contains our solutions for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
 
-Our approach is based on the [1st place solution by @brendanartley](httpss://www.kaggle.com/brendanartley) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
+Our first approach is based on the [1st place solution by @brendanartley](https://www.kaggle.com/brendanartley) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
 
 <h1 align="center">
 <img src="3D_Unet/imgs/model.jpg" alt="Model Architecture" width="800">
@@ -42,6 +42,7 @@ Your final directory structure should look like this:
 This project uses `conda` for environment management.
 
 1.  **Install Miniconda (if not already installed):**
+
 Get bash script for miniconda download from [here](https://docs.conda.io/en/main/miniconda.html#linux-installers)
 
 2.  **Create and Activate the Conda Environment:**
@@ -105,11 +106,8 @@ sbatch slurm.sh
 
 ### 3. Inference
 
-To generate predictions on the test set and create a submission file, run the inference script. Make sure to point to your trained model checkpoint.
+Inference is done through kaggle with the byu-submission.ipynb notebook. 
 
-```bash
-python -m src.infer --checkpoint_path checkpoints/best_model.pth --output_path submission.csv
-```
 
 
 ## 📚 References
