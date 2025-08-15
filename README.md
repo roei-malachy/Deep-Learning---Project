@@ -22,20 +22,22 @@ Required Kaggle inputs:
 
 **Competition Data:**
 /kaggle/input/byu-locating-bacterial-flagellar-motors-2025/
+---
 ├── train/
 ├── test/
 ├── train_labels.csv
 └── sample_submission.csv
-
+---
 **YOLO Dataset (Parsed Data):**
 /kaggle/input/parse-data/yolo_dataset/
+---
 ├── images/
 │   ├── train/
 │   └── val/
 └── labels/
     ├── train/
     └── val/
-
+---
 > If the `val` folders are missing, the script will automatically create an **80/20 train/val split**.
 
 
