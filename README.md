@@ -1,10 +1,11 @@
 # YOLO - Fast detection  
-**YOLOv8**  
+YOLOv8n (Ultralytics)
 
-This repository contains our YOLOv8-based solution for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
+This repository contains our YOLOv8n-based Kaggle Notebook solution for the **BYU - Locating Bacterial Flagellar Motors 2025** competition.
 
-Our approach focuses on using a **2D object detection model (YOLOv8n)** to detect bacterial motors in cryo-electron tomograms.  
-The pipeline includes preprocessing, training, and inference with a **3D distance-based NMS** to improve final predictions.
+Our approach uses a 2D object detection model (**YOLOv8n**, Ultralytics) to detect bacterial motors in cryo-electron tomograms.  
+The pipeline includes preprocessing, training, and inference with a 3D distance-based NMS to improve final predictions.
+
 
 ---
 
