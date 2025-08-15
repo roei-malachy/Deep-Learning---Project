@@ -84,7 +84,7 @@ python -m src.pre.run
 To train the model, you can run the provided script. The default hyperparameters are listed below. A full training run on an NVIDIA L40 takes approximately 17.5 hours for 250 epochs.
 
 ```bash
-# For local execution or interactive jobs
+# For local execution 
 bash run.sh
 
 # For SLURM-based clusters
@@ -92,6 +92,9 @@ sbatch slurm.sh
 
 ```
 #### Hyperparameters
+* **model_type** `3D U-Net`
+* **Encoder** `Swin3D-B`
+* **Number of Parameters:** `108_913_754`
 * **Optimizer:** `AdamW`
 * **Learning Rate:** `1e-4`
 * **Weight Decay:** `1e-4`
@@ -100,13 +103,15 @@ sbatch slurm.sh
 * **Batch Size:** `12`
 * **Loss Function:** `SmoothBCE`
 * **ROI Size:** `(64, 672, 672)`
-* **Kernel Size:** `7`
 
 ---
 
 ### 3. Inference
 
-Inference is done through kaggle with the byu-submission.ipynb notebook. 
+Inference is done through Kaggle using the `byu-submission.ipynb` notebook.  
+[View the Kaggle submission notebook here](https://www.kaggle.com/code/naama123/byu-submission/notebook?scriptVersionId=256102251). The submission notebook is based on the submission notebook of @brendanartley: 
+[View brendanartley notebook here](https://www.kaggle.com/code/brendanartley/byu-1st-place-submission)
+
 
 
 
@@ -115,3 +120,4 @@ Inference is done through kaggle with the byu-submission.ipynb notebook.
 1. [1st place solution of the BYU - Locating Bacterial Flagellar Motors 2025 competition by @brendanartley](https://www.kaggle.com/brendanartley)
 2. [Solution Metadata Dataset by @brendanartley](https://www.kaggle.com/datasets/brendanartley/solution-ds-byu-1st-place-metadata)
 3. [Competition Homepage: BYU - Locating Bacterial Flagellar Motors 2025](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025)
+4. [submission notebook by @brendanartley](https://www.kaggle.com/code/brendanartley/byu-1st-place-submission)
