@@ -47,8 +47,9 @@ Your final Kaggle directory structure should look like this:
 
 ## ⚙️ Setup and Installation
 In the **first cell** of your Kaggle Notebook, run:
+```
     !pip install ultralytics==8.3.0
-
+```
 Then simply click **Run All** in Kaggle — no further installation or internet connection is required.
 
 ---
