@@ -1,4 +1,4 @@
-# Comparing 3D and 2D Models for Object Detection of Bacterial Motors  
+# YOLO - Fast detection  
 **YOLOv8**  
 
 This repository contains our YOLOv8-based solution for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
