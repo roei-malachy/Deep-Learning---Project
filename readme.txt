@@ -1,6 +1,6 @@
-##📂 Runtime Layout in Kaggle
+## 📂 Runtime Layout in Kaggle
 
-Inputs:
+```
 /kaggle/input/byu-locating-bacterial-flagellar-motors-2025/
   ├── train/
   ├── test/
@@ -11,7 +11,6 @@ Inputs:
   ├── images/{train,val}/
   └── labels/{train,val}/
 
-Outputs:
 /kaggle/working/
   ├── yolo_weights/motor_detector/
   │   ├── results.csv
@@ -22,3 +21,4 @@ Outputs:
   │   └── val_metrics.png
   ├── artifacts/                 
   └── submission.csv
+```
