@@ -110,7 +110,7 @@ Inference is done through Kaggle using the `byu-submission.ipynb` notebook.
 [View the Kaggle submission notebook here](https://www.kaggle.com/code/naama123/byu-submission/notebook?scriptVersionId=256102251). The submission notebook is based on the submission notebook of @brendanartley: 
 [View brendanartley notebook here](https://www.kaggle.com/code/brendanartley/byu-1st-place-submission)
 
-
+---
 
 ##  YOLO - Fast detection  
 
