@@ -110,14 +110,14 @@ model, results = train_yolo_model(
 ```
 
 **Hyperparameters**  
-- Optimizer: AdamW  
-- Learning Rate: 0.001  
-- Epochs: 150  
-- Batch Size: 16  
-- Early Stopping: Patience = 8 epochs  
-- Loss Function: Box Loss, Classification Loss, Distribution Focal Loss  
-- Confidence Threshold: 0.45  
-- 3D NMS Distance: 60 px  
+- **Optimizer**: AdamW  
+- **Learning Rate**: 0.001  
+- **Epochs**: 150  
+- **Batch Size**: 16  
+- **Early Stopping**: Patience = 8 epochs  
+- **Loss Function**: Box Loss, Classification Loss, Distribution Focal Loss  
+- **Confidence Threshold**: 0.45  
+- **3D NMS Distance**: 60 px  
 
 ---
 
