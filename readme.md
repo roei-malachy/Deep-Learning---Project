@@ -3,7 +3,7 @@
 
 This repository contains our solutions for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
 
-Our first approach is based on the [1st place solution by @brendanartley](https://www.kaggle.com/brendanartley) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
+Our first approach is based on the [1st place solution by @brendanartley](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025/writeups/bartley-1st-place-3d-u-net-quantile-thresholding) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
 
 <h1 align="center">
 <img src="3D_Unet/imgs/model.jpg" alt="Model Architecture" width="800">
@@ -92,7 +92,7 @@ sbatch slurm.sh
 
 ```
 #### Hyperparameters
-* **model_type** `3D U-Net`
+* **Model type** `3D U-Net`
 * **Encoder** `Swin3D-B`
 * **Number of Parameters:** `108_913_754`
 * **Optimizer:** `AdamW`
@@ -120,4 +120,4 @@ Inference is done through Kaggle using the `byu-submission.ipynb` notebook.
 1. [1st place solution of the BYU - Locating Bacterial Flagellar Motors 2025 competition by @brendanartley](https://www.kaggle.com/brendanartley)
 2. [Solution Metadata Dataset by @brendanartley](https://www.kaggle.com/datasets/brendanartley/solution-ds-byu-1st-place-metadata)
 3. [Competition Homepage: BYU - Locating Bacterial Flagellar Motors 2025](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025)
-4. [submission notebook by @brendanartley](https://www.kaggle.com/code/brendanartley/byu-1st-place-submission)
+4. [Submission notebook by @brendanartley](https://www.kaggle.com/code/brendanartley/byu-1st-place-submission)
