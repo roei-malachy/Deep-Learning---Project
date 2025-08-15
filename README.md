@@ -132,6 +132,6 @@ The `submission.csv` will be saved in `/kaggle/working/`.
 ---
 
 ## 📚 References  
-1. (https://www.kaggle.com/code/willongwang/byu-submission-baseline-ipynb/notebook)
+1. https://www.kaggle.com/code/willongwang/byu-submission-baseline-ipynb/notebook
 2. [Competition Homepage: BYU - Locating Bacterial Flagellar Motors 2025](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025)
 
