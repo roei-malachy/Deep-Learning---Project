@@ -93,14 +93,14 @@ model, results = train_yolo_model(
 ```
 
 **Hyperparameters**  
-- Optimizer: Default YOLOv8 (AdamW)
-- Learning Rate: Default YOLOv8
+- Optimizer: AdamW  
+- Learning Rate: 0.001  
 - Epochs: 150  
 - Batch Size: 16  
-- Early Stopping: Patience 8 epochs  
-- Loss Function: YOLOv8 default (box, cls, dfl losses)
-- Confidence Threshold: 0.45
-- 3D NMS Distance: 60 px
+- Early Stopping: Patience = 8 epochs  
+- Loss Function: Box Loss, Classification Loss, Distribution Focal Loss  
+- Confidence Threshold: 0.45  
+- 3D NMS Distance: 60 px  
 
 ---
 
