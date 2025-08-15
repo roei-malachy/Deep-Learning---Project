@@ -45,33 +45,44 @@ Your final Kaggle directory structure should look like this:
 ---
 
 ## ⚙️ Setup and Installation  
-1. Install Miniconda (if not already installed):
 
+This project uses `conda` for environment management.
+
+1.  **Install Miniconda (if not already installed):**
+
+Get bash script for miniconda download from [here](https://docs.conda.io/en/main/miniconda.html#linux-installers)
+
+2.  **Create and Activate the Conda Environment:**
+    ```bash
+    # Set up channels for best dependency resolution
+    conda config --set channel_priority flexible
+    conda config --add channels conda-forge nvidia pytorch
+
+    # Create and activate the environment
+    conda create --name yolo_env python=3.10
+    conda activate yolo_env
+    ```
+
+3.  **Install Dependencies:**
+    ```bash
+   # Install PyTorch via Conda (with CUDA 11.8)
+    conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8
+
+    # Install remaining packages via Pip
+    pip install ultralytics==8.3.0 numpy pandas matplotlib pillow pyyaml
+    ```
 
 ---
 
+
+
+
+
+
+
+
+
 ## 🚀 Usage  
-
-1. **Install Miniconda (if not already installed):**  
-Get bash script for Miniconda download from [here](https://docs.conda.io/en/latest/miniconda.html)  
-
-2. **Create and Activate the Conda Environment:**  
-# Set up channels for best dependency resolution  
-conda config --set channel_priority flexible  
-conda config --add channels conda-forge nvidia pytorch  
-
-# Create and activate the environment  
-conda create --name yolo_env python=3.10  
-conda activate yolo_env  
-
-3. **Install Dependencies:**  
-# Install PyTorch via Conda (with CUDA 11.8)  
-conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8  
-
-# Install remaining packages via Pip  
-pip install ultralytics==8.3.0 numpy pandas matplotlib pillow pyyaml  
-
-
 ---
 
 ### 1. Preprocessing  
