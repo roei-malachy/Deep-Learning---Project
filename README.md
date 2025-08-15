@@ -38,7 +38,7 @@ Required Kaggle inputs:
 
 > If the `val` folders are missing, the script will automatically create an **80/20 train/val split**.
 
----
+
 
 ## ⚙️ Setup and Installation
 In the **first cell** of your Kaggle Notebook, run:
