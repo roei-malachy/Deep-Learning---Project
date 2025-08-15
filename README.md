@@ -15,33 +15,25 @@ The model was fine-tuned on a custom YOLO-formatted dataset derived from the com
 
 ---
 
-## 📋 Prerequisites  
-Before you begin, you need to ensure the competition data is available in the Kaggle environment.
+## 📋 Prerequisites
+Required Kaggle inputs:
+- `/kaggle/input/byu-locating-bacterial-flagellar-motors-2025`
+- `/kaggle/input/parse-data/yolo_dataset`
 
-**Competition Data:**  
-Download the competition dataset from the Kaggle page and ensure it appears in `/kaggle/input/byu-locating-bacterial-flagellar-motors-2025/`.
+**Competition Data:**
+    /kaggle/input/byu-locating-bacterial-flagellar-motors-2025/
+    ├── train/
+    ├── test/
+    ├── train_labels.csv
+    └── sample_submission.csv
 
-**YOLO Dataset (Parsed Data):**  
-A YOLO-formatted dataset must exist under `/kaggle/input/parse-data/yolo_dataset/` with the structure:
-```
-/kaggle/input/parse-data/yolo_dataset/
-├── images/{train,val}/
-└── labels/{train,val}/
-```
-If `val` folders are missing, the script will automatically create an 80/20 train/val split.
+**YOLO Dataset (Parsed Data):**
+    /kaggle/input/parse-data/yolo_dataset/
+    ├── images/{train,val}/
+    └── labels/{train,val}/
 
-Your final Kaggle directory structure should look like this:
-```
-/kaggle/input/byu-locating-bacterial-flagellar-motors-2025/
-├── train/
-├── test/
-├── train_labels.csv
-└── sample_submission.csv
+> If the `val` folders are missing, the script will automatically create an **80/20 train/val split**.
 
-/kaggle/input/parse-data/yolo_dataset/
-├── images/{train,val}/
-└── labels/{train,val}/
-```
 
 ---
 
