@@ -1,5 +1,4 @@
 # YOLO - Fast detection  
-YOLOv8n (Ultralytics)
 
 This repository contains our YOLOv8n-based Kaggle Notebook solution for the **BYU - Locating Bacterial Flagellar Motors 2025** competition.
 📓 **Kaggle Notebook:** [YOLO - Fast detection](https://www.kaggle.com/code/roeiya/yolo-fast-detection/edit)
