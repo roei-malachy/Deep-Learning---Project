@@ -65,7 +65,7 @@ Get bash script for miniconda download from [here](https://docs.conda.io/en/main
 
 3.  **Install Dependencies:**
     ```bash
-   # Install PyTorch via Conda (with CUDA 11.8)
+    # Install PyTorch via Conda (with CUDA 11.8)
     conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8
 
     # Install remaining packages via Pip
