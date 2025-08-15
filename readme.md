@@ -1,5 +1,5 @@
 # Comparing 3D and 2D Models for Object Detection of Bacterial Motors
-## 3D-Unet
+## 3D U-Net
 
 This repository contains our solutions for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
 
@@ -101,7 +101,7 @@ sbatch slurm.sh
 * **Scheduler:** `Constant`
 * **Epochs:** `250`
 * **Batch Size:** `12`
-* **Loss Function:** `SmoothBCE`
+* **Loss Function:** `SmoothBCE (main head + deep supervision + pooled loss)`
 * **ROI Size:** `(64, 672, 672)`
 
 ---
