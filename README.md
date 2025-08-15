@@ -71,18 +71,18 @@ The workflow is divided into **preprocessing**, **training**, and **inference**.
 ### 1. Preprocessing  
 Checks and fixes dataset paths, and creates validation split if needed.
 ```python
-from train_yolo import prepare_dataset
+from yolo_fast_detection import prepare_dataset
 yaml_path = prepare_dataset()
 ```
 
 ---
 
 ### 2. Training  
-Runs YOLOv8 training with the default hyperparameters listed below.  
+Runs YOLOv8 training with the hyperparameters below.  
 A full run on an NVIDIA T4 GPU with 150 epochs takes around 1–1.5 hours.
 
 ```python
-from train_yolo import train_yolo_model
+from yolo_fast_detection import train_yolo_model
 model, results = train_yolo_model(
     yaml_path="fixed_dataset.yaml",
     pretrained_weights_path="yolov8n.pt",
@@ -108,7 +108,7 @@ model, results = train_yolo_model(
 Runs inference on the competition test set, applies 3D NMS, and generates the submission file.
 
 ```bash
-python train_yolo.py
+python yolo_fast_detection.py
 ```
 The `submission.csv` will be saved in `/kaggle/working/`.
 
