@@ -45,26 +45,31 @@ Your final Kaggle directory structure should look like this:
 ---
 
 ## ⚙️ Setup and Installation  
+1. Install Miniconda (if not already installed):
 
-This project runs directly in the Kaggle Notebook environment.  
-However, if running locally, follow these steps:
-
-```bash
-# Python environment
-conda create --name byu_yolo_env python=3.10
-conda activate byu_yolo_env
-
-# Install YOLOv8 and dependencies
-pip install ultralytics
-pip install torch torchvision torchaudio
-pip install numpy pandas matplotlib pillow pyyaml
-```
 
 ---
 
 ## 🚀 Usage  
-
+1. Install Miniconda (if not already installed):
 The workflow is divided into **preprocessing**, **training**, and **inference**.
+Get bash script for Miniconda download from here
+
+2. Create and Activate the Conda Environment:
+# Set up channels for best dependency resolution
+conda config --set channel_priority flexible
+conda config --add channels conda-forge nvidia pytorch
+
+# Create and activate the environment
+conda create --name yolo_env python=3.10
+conda activate yolo_env
+
+3. Install Dependencies:
+# Install PyTorch via Conda (with CUDA 11.8)
+conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8
+
+# Install remaining packages via Pip
+pip install ultralytics==8.3.0 numpy pandas matplotlib pillow pyyaml
 
 ---
 
