@@ -45,24 +45,11 @@ Your final Kaggle directory structure should look like this:
 
 ---
 
-## ⚙️ Setup and Installation  
+## ⚙️ Setup and Installation
+In the **first cell** of your Kaggle Notebook, run:
+    !pip install ultralytics==8.3.0
 
-This project uses `conda` for environment management.
-
-1.  **Install Miniconda (if not already installed):**
-
-Get bash script for miniconda download from [here](https://docs.conda.io/en/main/miniconda.html#linux-installers)
-
-2.  **Create and Activate the Conda Environment:**
-    ```bash
-    # Set up channels for best dependency resolution
-    conda config --set channel_priority flexible
-    conda config --add channels conda-forge nvidia pytorch
-
-    # Create and activate the environment
-    conda create --name yolo_env python=3.10
-    conda activate yolo_env
-    ```
+Then simply click **Run All** in Kaggle — no further installation or internet connection is required.
 
 3.  **Install Dependencies:**
     ```bash
