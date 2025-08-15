@@ -107,6 +107,6 @@ Upload this file as your competition submission.
 ---
 
 ## 📚 References  
-1. https://www.kaggle.com/code/willongwang/byu-submission-baseline-ipynb/notebook
+1. https://www.kaggle.com/code/willongwang/byu-visualization-yolo-baseline-ipynb
 2. [Competition Homepage: BYU - Locating Bacterial Flagellar Motors 2025](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025)
 
