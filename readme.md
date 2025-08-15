@@ -101,7 +101,6 @@ sbatch slurm.sh
 * **Epochs:** `250`
 * **Batch Size:** `12`
 * **Loss Function:** `SmoothBCE (main head + deep supervision + pooled loss)`
-* **ROI Size:** `(64, 672, 672)`
 
 ---
 
