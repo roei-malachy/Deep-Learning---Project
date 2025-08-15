@@ -100,13 +100,10 @@ model, results = train_yolo_model(
 
 ---
 
-### 3. Inference  
-Runs inference on the competition test set, applies 3D NMS, and generates the submission file.
+## 3. Inference & Submission
+This step runs automatically in Kaggle when you **Run All** — performs inference on the test set, applies 3D NMS, and saves `submission.csv` to `/kaggle/working/`.  
+Upload this file as your competition submission.
 
-```bash
-python yolo_fast_detection.py
-```
-The `submission.csv` will be saved in `/kaggle/working/`.
 
 ---
 
