@@ -51,15 +51,6 @@ In the **first cell** of your Kaggle Notebook, run:
 
 Then simply click **Run All** in Kaggle — no further installation or internet connection is required.
 
-3.  **Install Dependencies:**
-    ```bash
-    # Install PyTorch via Conda (with CUDA 11.8)
-    conda install pytorch==2.5.1 torchaudio==2.5.1 torchvision==0.20.1 pytorch-cuda==11.8
-
-    # Install remaining packages via Pip
-    pip install ultralytics==8.3.0 numpy pandas matplotlib pillow pyyaml
-    ```
-
 ---
 
 
