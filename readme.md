@@ -1,7 +1,6 @@
 # Comparing 3D and 2D Models for Object Detection of Bacterial Motors
-## 3D U-Net
-
 This repository contains our solutions for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
+## 3D U-Net
 
 Our first approach is based on the [1st place solution by @brendanartley](https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025/writeups/bartley-1st-place-3d-u-net-quantile-thresholding) and utilizes a **3D U-Net** with a **Swin3D-B encoder**. The model is trained using heavy augmentations and an auxiliary loss to effectively localize bacterial motors in noisy cryo-electron tomograms.
 
