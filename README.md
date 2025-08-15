@@ -4,7 +4,7 @@
 This repository contains our YOLOv8-based solution for the **BYU - Locating Bacterial Flagellar Motors 2025** Kaggle competition.
 
 Our approach focuses on using a **2D object detection model (YOLOv8n)** to detect bacterial motors in cryo-electron tomograms.  
-The pipeline includes preprocessing of the YOLO dataset, training with early stopping, and an inference stage with a **3D distance-based NMS** to improve final predictions.
+The pipeline includes preprocessing, training, and inference with a **3D distance-based NMS** to improve final predictions.
 
 ---
 
