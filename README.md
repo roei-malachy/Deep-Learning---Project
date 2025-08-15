@@ -3,7 +3,7 @@
 This repository contains our YOLOv8n-based Kaggle Notebook solution for the **BYU - Locating Bacterial Flagellar Motors 2025** competition.
 📓 **Kaggle Notebook:** [YOLO - Fast detection](https://www.kaggle.com/code/roeiya/yolo-fast-detection/edit)
 
-Our approach was inspired by [this Kaggle baseline notebook](https://www.kaggle.com/code/willongwang/byu-submission-baseline-ipynb/notebook),  
+Our approach was inspired by [this Kaggle baseline notebook](https://www.kaggle.com/code/willongwang/byu-visualization-yolo-baseline-ipynb),  
 which implemented a basic YOLO model for fast predictions without parameter optimization or advanced inference enhancements.  
 
 
