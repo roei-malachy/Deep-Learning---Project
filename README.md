@@ -196,7 +196,7 @@ model, results = train_yolo_model(
     yaml_path="fixed_dataset.yaml",
     pretrained_weights_path="yolov8n.pt",
     epochs=150,
-    batch_size=16,
+    batch_size=dynamic,
     img_size=640
 )
 ```
