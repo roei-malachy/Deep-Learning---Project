@@ -101,7 +101,7 @@ model, results = train_yolo_model(
 ---
 
 ## 3. Inference & Submission
-This step runs automatically in Kaggle when you **Run All** — performs inference on the test set, applies 3D NMS, and saves `submission.csv` to `/kaggle/working/`.  
+This step runs automatically in Kaggle when you **Run All** — performs inference on the test set, and saves `submission.csv` to `/kaggle/working/`.  
 Upload this file as your competition submission.
 
 
